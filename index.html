@@ -1,13 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<title>Kataji's Homepage</title>
+	<meta charset="utf-8">
+	<script>
+		function changeEmoji(){
+			var emoji = document.getElementById('originalEmoji');
+			if(emoji.src == "https://www.maskemojis.com/wp-content/uploads/2015/09/Flushed.png"){
+				emoji.src = "https://tse2-mm.cn.bing.net/th?id=OIP.OMe0-4AOUUpv4gd46kqBgwHaHa&p=0&o=5&pid=1.1";
+			}
+			else{
+				emoji.src = "https://www.maskemojis.com/wp-content/uploads/2015/09/Flushed.png";
+			}
+		}
+	</script>
+	<script>
+		function changeFont(){
+			var paragraph = document.getElementById('exampleParagraph');
+
+			if(paragraph.style.color != 'orange'){
+				paragraph.style.color = 'orange';
+				paragraph.style.fontFamily = 'Georgia';
+			}
+			else{
+				paragraph.style.color = 'black';
+				paragraph.style.fontFamily = 'Clibri';
+			}
+		}
+	</script>
+</head>
 <body>
 <h1>Hello World</h1>
 <p>New to JS ->.-></p>
+
+<h2>JS for changing html contents</h2>
+<img id="originalEmoji" src="https://www.maskemojis.com/wp-content/uploads/2015/09/Flushed.png" width="100" height="100">
+<button onclick="changeEmoji();"> Click here!</button>
+
+<h2>JS for changing css styles</h2>
+<p id="exampleParagraph">This is just an example paragraph.</p>
+<p id="exampleFont"></p>
+<button onclick="changeFont();"> Click here!</button>
 <h2>Manual Logs</h2>
 <ol>
 	<li>2018/3/29 started learning JS on edX.org</li>
 	<li>2018/3/30 10:58 created first page, index.html</li>
 	<li>2018/3/30 11:34 added the above logs</li>
+	<li>2018/3/30 12:06 added the changable emoji</li>
+	<li>2018/3/30 12:17 added the example paragraph with changable color and font</li>
 </ol>
 </body>
 </html>
